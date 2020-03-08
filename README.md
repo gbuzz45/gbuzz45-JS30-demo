@@ -1,9 +1,9 @@
 # JS30 - gbuzz45 put demo
 
-|#|Course|Done|
-|---|---|---|
-|1|JavaScript Drum Kit|✔️|
-|2|CSS + JS Clock|✔️|
+|#|Course|Done|Demo|
+|---|---|---|---|
+|1|JavaScript Drum Kit|✔️|[Demo](https://gbuzz45.github.io/gbuzz45-JS30-demo/01_Drum_Kit/01_Drum_Kit.html)|
+|2|CSS + JS Clock|✔️|[Demo](https://gbuzz45.github.io/gbuzz45-JS30-demo/02_Clock/02_Clock.html)|
 |3|Playing with CSS Variables and JS||
 |4|Array Cardio Day||
 |5|Flex Panels Image Gallery||
