@@ -1,4 +1,4 @@
-# JS30#01 Clock
+# JS30#02 Clock
 ⌚️Sun, Mar 8, 2020 
 
 JS30課程 https://javascript30.com
