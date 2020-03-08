@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>#1 Drum Kit</title>
+</head>
+<style>
+  body {
+    background: url(images/crowd.jpeg) no-repeat 0 0 #FEAC5E;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+
+  .keys {
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .key {
+    display: inline-block;
+    border: 4px solid #000;
+    border-radius: 5px;
+    margin: 0.5rem;
+    font-size: 1rem;
+    padding: 1rem .5rem;
+    transition: all 0.08s;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 5px black;
+  }
+
+  .playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+  }
+
+  kbd {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .sound {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffc600;
+  }
+</style>
+
+<body>
+  <!--可查看keycode.info-->
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+
+  <audio src="sound/clap.wav" data-key="65"></audio>
+  <audio src="sound/hihat.wav" data-key="83"></audio>
+  <audio src="sound/kick.wav" data-key="68"></audio>
+  <audio src="sound/openhat.wav" data-key="70"></audio>
+  <audio src="sound/boom.wav" data-key="71"></audio>
+  <audio src="sound/ride.wav" data-key="72"></audio>
+  <audio src="sound/snare.wav" data-key="74"></audio>
+  <audio src="sound/tom.wav" data-key="75"></audio>
+  <audio src="sound/tink.wav" data-key="76"></audio>
+
+  <script>
+    // function 播音效&增加樣式
+    function playSound(e) {
+      //console.log(e);可檢查KeyboardEvent物件
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+      if (!audio) return; //stop the function from nunning all together
+      audio.currentTime = 0; //rewind to the start 00:00
+      audio.play();
+
+      key.classList.add('playing')
+    }
+
+    // function 移除樣式
+    function removeTransition(e) {
+      //console.log(e);可檢查TransitionEvent物件
+      if (e.propertyName !== 'transform') return; //skip it if it's not a transform
+      this.classList.remove('playing');
+    }
+
+
+    // EventListener 動畫結束時移除樣式
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+    // EventListener 敲鍵盤
+    window.addEventListener('keydown', playSound);
+
+  </script>
+
+</body>
+
+</html>
