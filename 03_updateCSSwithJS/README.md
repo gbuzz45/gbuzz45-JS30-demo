@@ -17,10 +17,10 @@ step可省略
 - 定義預設值 `:root { --變數名稱 : 預設值}` [:information_source:](https://developer.mozilla.org/en-US/docs/Web/CSS/:root)
 - 使用預設值 `.elem { css屬性: var(--變數名稱)}`
 
-假如將:root裡的預設值寫進行內
-譬如CSS先設定了`:root{--base:red}`
-又在某DOM行內寫上`style="--base:green"`
-**JS將因權重而改變不了行內的設定**
+假如將:root裡的預設值寫進行內<br>
+譬如CSS先設定了`:root{--base:red}`<br>
+又在某DOM行內寫上`style="--base:green"`<br>
+**JS將因權重而改變不了行內的設定**<br>
 
 
 ## Javascript
@@ -65,10 +65,10 @@ step可省略
 **change**
 - input, select, textarea當控件失去輸入焦點並且其值已被修改時
 - 觸發時間後於input
-  
-因為firefox在change的表現上過於符合規範，失去焦點才會改變，
-IE又無法如預期地作用input
-**JS30此例透過change + mousemove有考慮到兼容，是挺好的方式**
+<br>
+因為firefox在change的表現上過於符合規範，失去焦點才會改變，<br>
+IE又無法如預期地作用input<br>
+**JS30此例透過change + mousemove有考慮到兼容，是挺好的方式**<br>
 <br>
 
 【2】延伸:改變type="range"的樣式 [:information_source:](https://www.oxxostudio.tw/articles/201503/html5-input-range-style.html)
