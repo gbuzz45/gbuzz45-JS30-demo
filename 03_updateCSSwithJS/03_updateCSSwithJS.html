@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update CSS Variables with JS</title>
+</head>
+<style>
+  :root{
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 10px;
+  }
+
+  img{ 
+    padding:  var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+  }
+
+  .h1{
+    color:  var(--base);
+  }
+
+  body{
+    background: #FEAC5E;
+    background: -webkit-linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E);
+    background: linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E);
+    color: #fff;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .controls{ margin-bottom: 50px; }
+  
+
+</style>
+<body>
+  <!--透過JS控制CSS-->
+  <h2>Update CSS Variables with <span class="h1">JS</span></h2>
+
+  <div class="controls">
+    <label for="spacing">Spacing:</label>
+    <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+    <label for="blur">Blur:</label>
+    <input type="range" name="blur" min="0" max="25" value="3" data-sizing="px">
+
+    <label for="base">Base Color</label>
+    <input type="color" name="base" value="#ffc600">
+  </div>
+
+  <img src="http://unsplash.it/800/500?image=177">
+
+
+<script>
+  const inputs = document.querySelectorAll('.controls input');
+
+  function handleUpdate(){
+    //console.log(this.value);檢查值的改變
+    //dataset會是一個物件，記錄所有data值，
+    // 此例利用預先設定的name=CSS屬性，value=屬性值，data-sizing來作屬性值的單位
+    const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+  }
+
+  inputs.forEach(input => input.addEventListener('change',handleUpdate)); // 欄位值改變
+  inputs.forEach(input => input.addEventListener('mousemove',handleUpdate)); // 拖曳(練續改變)
+
+</script>
+
+</body>
+</html>
