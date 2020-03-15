@@ -52,14 +52,12 @@ step可省略
 
 ## 補充
 ### 【1】關於input type="range" 滑桿拖曳改值 on input v.s. on change [:information_source:](https://www.impressivewebs.com/onchange-vs-oninput-for-range-sliders/)
-
 |Event|Chrome|Opera|Firefox|IE11|
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 |input|滑鼠:即時<br>鍵盤:即時|滑鼠:即時<br>鍵盤:即時|滑鼠:即時<br>鍵盤:即時|滑鼠&鍵盤:<br>無作用<br>但選鈕的tooltip會顯示值|
 |change|滑鼠:停止才變<br>鍵盤:即時改變|滑鼠:停止才變<br>鍵盤:即時改變|滑鼠:停止才變<br>鍵盤:blur才變|滑鼠:即時<br>鍵盤:即時|
 
 那麼選哪個好?
-
 #### input
 - <input>, <select>,  <textarea> 元素的value 被修改時就會觸發，不管是透過滑鼠還是鍵盤
 - 觸發時間先於change
@@ -78,13 +76,13 @@ IE又無法如預期地作用input
 
 1. CSS
 <br>
-```
+```css=
 input[type="range"]{
   -webkit-appearance: none;
   overflow: hidden;
 }
 
-/* -webkitz */
+// -webkitz
 
 input[type="range"]::-webkit-slider-thumb
 input[type="range"]::-webkit-slider-thumb:hover
@@ -92,10 +90,10 @@ input[type="range"]::-webkit-slider-thumb:active
 
 input[type="range"]::-webkit-slider-thumb:before,
 input[type="range"]::-webkit-slider-thumb:after
-/* 可+偽元素 */
+可+偽元素
 
 
-/* -moz */
+// -moz
 
 input[type="range"]::-moz-range-track
 input[type="range"]::-moz-range-thumb
