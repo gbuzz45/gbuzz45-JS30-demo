@@ -22,7 +22,6 @@ step可省略
 又在某DOM行內寫上`style="--base:green"`
 **JS將因權重而改變不了行內的設定**
 
-<br>
 
 ## Javascript
 1. 先定義目標
@@ -47,42 +46,42 @@ step可省略
   // inputs.forEach(input => input.addEventListener('input',handleUpdate));
   // (但有兼容問題 Internet Explorer: Only supports input of type text and password.)
 ```
-<br>
+
 
 
 ## 補充
-### 【1】關於input type="range" 滑桿拖曳改值 on input v.s. on change [:information_source:](https://www.impressivewebs.com/onchange-vs-oninput-for-range-sliders/)
+【1】關於input type="range" 滑桿拖曳改值 on input v.s. on change [:information_source:](https://www.impressivewebs.com/onchange-vs-oninput-for-range-sliders/)
+
 |Event|Chrome|Opera|Firefox|IE11|
 |---|---|---|---|---|
 |input|滑鼠:即時<br>鍵盤:即時|滑鼠:即時<br>鍵盤:即時|滑鼠:即時<br>鍵盤:即時|滑鼠&鍵盤:<br>無作用<br>但選鈕的tooltip會顯示值|
 |change|滑鼠:停止才變<br>鍵盤:即時改變|滑鼠:停止才變<br>鍵盤:即時改變|滑鼠:停止才變<br>鍵盤:blur才變|滑鼠:即時<br>鍵盤:即時|
 
-那麼選哪個好?
-#### input
-- <input>, <select>,  <textarea> 元素的value 被修改時就會觸發，不管是透過滑鼠還是鍵盤
-- 觸發時間先於change
+那麼選哪個好？
+**input**
+- input, select, textarea元素的value被修改時就會觸發，不管是透過滑鼠還是鍵盤
+- 觸發時間先於`change`
 
-#### change
-- <input>, <select>,  <textarea> 當控件失去輸入焦點並且其值已被修改時
+**change**
+- input, select, textarea當控件失去輸入焦點並且其值已被修改時
 - 觸發時間後於input
-<br>
+  
 因為firefox在change的表現上過於符合規範，失去焦點才會改變，
 IE又無法如預期地作用input
 **JS30此例透過change + mousemove有考慮到兼容，是挺好的方式**
 <br>
 
-
-### 【2】延伸:改變type="range"的樣式 [:information_source:](https://www.oxxostudio.tw/articles/201503/html5-input-range-style.html)
+【2】延伸:改變type="range"的樣式 [:information_source:](https://www.oxxostudio.tw/articles/201503/html5-input-range-style.html)
 
 1. CSS
-<br>
-```css=
+
+```
 input[type="range"]{
   -webkit-appearance: none;
   overflow: hidden;
 }
 
-// -webkitz
+// -webkit
 
 input[type="range"]::-webkit-slider-thumb
 input[type="range"]::-webkit-slider-thumb:hover
