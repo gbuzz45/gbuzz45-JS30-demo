@@ -14,7 +14,7 @@ step可省略
 <br>
 
 ## CSS
-- 定義預設值 `:root { --變數名稱 : 預設值}` [:information_source:](https://developer.mozilla.org/en-US/docs/Web/CSS/:root)
+- 定義預設值 `:root { --變數名稱 : 預設值}` [URL](https://developer.mozilla.org/en-US/docs/Web/CSS/:root)
 - 使用預設值 `.elem { css屬性: var(--變數名稱)}`
 
 假如將:root裡的預設值寫進行內<br>
@@ -50,7 +50,7 @@ step可省略
 
 
 ## 補充
-【1】關於input type="range" 滑桿拖曳改值 on input v.s. on change [:information_source:](https://www.impressivewebs.com/onchange-vs-oninput-for-range-sliders/)
+【1】關於input type="range" 滑桿拖曳改值 on input v.s. on change [URL](https://www.impressivewebs.com/onchange-vs-oninput-for-range-sliders/)
 
 |Event|Chrome|Opera|Firefox|IE11|
 |---|---|---|---|---|
@@ -71,7 +71,7 @@ IE又無法如預期地作用input<br>
 **JS30此例透過change + mousemove有考慮到兼容，是挺好的方式**<br>
 <br>
 
-【2】延伸:改變type="range"的樣式 [:information_source:](https://www.oxxostudio.tw/articles/201503/html5-input-range-style.html)
+【2】延伸:改變type="range"的樣式 [URL](https://www.oxxostudio.tw/articles/201503/html5-input-range-style.html)
 
 1. CSS
 
