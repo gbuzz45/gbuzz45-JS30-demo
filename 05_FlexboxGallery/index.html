@@ -152,8 +152,9 @@
   function toggleOpen(){
     this.classList.toggle('open');
     // 增加移除鄰層
-    this.nextElementSibling.classList.remove('open')
-    this.previousElementSibling.classList.remove('open')
+    for (let sibling of this.parentNode.children) {
+      if (sibling !== this) sibling.classList.remove('open');
+    }
   }
 
   function toggleActive(e){
