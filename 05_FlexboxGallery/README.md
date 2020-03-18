@@ -1,5 +1,5 @@
 # JS30#05 FlexboxGallery
-⌚️Sun, Mar 19, 2020 
+⌚️Thu, Mar 19, 2020 
 
 [DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/05_FlexboxGallery/index.html)
 
