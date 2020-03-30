@@ -37,7 +37,6 @@
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-
     // ES5
     // const fifteen = inventors.filter(function(inventor){
     //   if(inventor.year >= 1500 && inventor.year < 1600){
@@ -48,22 +47,13 @@
     const fifteen = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600);
     console.table(fifteen);
 
-    // var newArray = arr.filter(callback(element[, index[, array]]) [, thisArg])
-    // 這連結解釋thisArg什麼時候用到，算是改變this的作用 https://stackoverflow.com/a/38337957/11767346
-    // 篩選/有點each+if...ese...的概念,代的參數類似this的作用
 
 
-
-    // Array.prototype.map()
-    // 組裝工廠/會產生新陣列/有些情況不需要新陣列就不適用map因不利效能
     // 2. Give us an array of the inventors first and last names
-
     const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
     console.log(fullNames);
 
 
-    // Array.prototype.sort()
-    // 冒泡排序？/Ternary Operator(三元運算子)/ return 1 or -1 當前
     // 3. Sort the inventors by birthdate, oldest to youngest
     // ES5
     // const ordered = inventors.sort(function(a, b){
@@ -80,7 +70,6 @@
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
-    // 化繁為簡，可以用來做加法
 
     //這題目標的原理如下
     // var totalYears = 0;
@@ -102,8 +91,8 @@
     console.table(oldest);
 
 
-    // // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-    // // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
     // const category = document.querySelector('.mw-category');
     // // ES5: const links = Array.from(category.querySelectorAll('a'));
     // const links = [...category.querySelectorAll('a')];
@@ -111,7 +100,6 @@
     //               .map(link => link.textContent)
     //               .filter(streetName => streetName.includes('de'));
     // console.list(de);                  
-    // //NodeList使用.map會報錯VM764:1 Uncaught TypeError: links.map is not a function，相關說明 https://ithelp.ithome.com.tw/articles/10211876,此處先將它處理成陣列
 
 
     // 7. sort Exercise
@@ -122,10 +110,6 @@
       return aLast > bLast ? 1 : -1;
     });
     console.table(alpha);
-    // .split將字串變陣列，通過搜索模式來完成劃分
-    // 物件解構賦值(直接變數與值以key對應) https://pjchender.blogspot.com/2017/01/es6-object-destructuring.html
-
-
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
@@ -136,7 +120,7 @@
       }
       obj[item]++;
       return obj;
-    }, {});//obj初始是個{}
+    }, {}); //obj初始是個{}
     console.log(transportation);
 
 
