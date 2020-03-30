@@ -76,7 +76,7 @@ const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`
 <ol>
   <li>sort排序原理？似乎不只是冒泡，看不懂先留<a href="https://medium.com/@leokao0726/%E6%B7%BA%E8%AB%87-js-sort-%E5%88%B0%E8%83%8C%E5%BE%8C%E6%8E%92%E5%BA%8F%E6%96%B9%E6%B3%95-1035f5b8cde8" target="_blank" title="淺談-js-sort-到背後排序方法">📄#1</a><a href="https://segmentfault.com/a/1190000009249758" target="_blank" title="Array.prototype.sort()方法到底是如何排序的？">📄#2</a></li>
   <li><a href="https://juejin.im/entry/59250db844d904006cefa11f" target="_blank">經典排序介紹📄</a></li>
-  <li>善用三元運算式 `(比較) ? return 1 : retrun -1` </li>
+  <li>善用三元運算式  `(比較) ? return 1 : retrun -1` </li>
 </ol>
 
 #### Answer:
