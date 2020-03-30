@@ -5,7 +5,7 @@
 |1|JavaScript Drum Kit|✔️|[Demo](https://gbuzz45.github.io/gbuzz45-JS30-demo/01_Drum_Kit/01_Drum_Kit.html)|
 |2|CSS + JS Clock|✔️|[Demo](https://gbuzz45.github.io/gbuzz45-JS30-demo/02_Clock/02_Clock.html)|
 |3|Playing with CSS Variables and JS|✔️|[Demo](https://gbuzz45.github.io/gbuzz45-JS30-demo/03_updateCSSwithJS/03_updateCSSwithJS.html)|
-|4|Array Cardio Day||
+|4|Array Cardio Day|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/04_js_array_1/)
 |5|Flex Panels Image Gallery|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/05_FlexboxGallery/index.html)
 |6|Ajax Type Ahead||
 |7|.Array Cardio Day||
