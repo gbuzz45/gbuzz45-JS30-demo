@@ -70,7 +70,7 @@ function displayMatches(){
   suggestions.innerHTML = html;
 }
 ```
-#### 2.調整高亮樣式
+#### 3.調整高亮樣式
 ```javascript
 function displayMatches(){
   const matchArray = findMatches(this.value, cities);
@@ -88,7 +88,7 @@ function displayMatches(){
   suggestions.innerHTML = html;
 }
 ```
-#### 3.改變數值格式 千位符
+#### 4.改變數值格式 千位符
 ```javascript
 function numberWithCommas(x){
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
