@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax Type Ahead with fetch()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form class="search-form">
+    <input type="text" class="search" placeholder="City or State">
+    <ul class="suggestions">
+      <li>Filter for a city</li>
+      <li>or a state</li>
+    </ul>
+  </form>
+<script>
+const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+// 測試回應,會是一個promise物件，但不是需要的資料
+//fetch(endpoint).then(blob => console.log(blob));
+
+
+// 用JSON.parse(blob)也不行
+//fetch(endpoint).then(blob => JSON.parse(blob));
+
+
+// 回傳的 response 需要透過 json() (在 Body 可以找到定義, Body 是用 Request 和 Response 實作出來的物件.)
+// fetch(endpoint)
+//   .then(blob => blob.json())
+//   .then(data => console.log(data));
+
+
+// 因為 const 不能被重新指定值，但如果原賦值為空陣列，可以往陣列中放東西
+// 並利用`...`展開運算符(Spread Operator)解群組，這樣放進cities的結果就不是會單是一個陣列，而是我們要的資料總數量
+const cities = [];
+fetch(endpoint)
+  .then(blob => blob.json())
+  .then(data => cities.push(...data));
+
+// 篩選
+// RegExp Object 'g'意謂全部的範圍global，'i'意謂不分大小寫case-insensitive
+function findMatches(wordToMatch, cities){
+  return cities.filter(place => {
+    const regex = new RegExp(wordToMatch, 'gi');
+    return place.city.match(regex) || place.state.match(regex);
+  });
+}  
+
+// 轉數值格式 千位符號
+function numberWithCommas(x){
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+// 展示
+function displayMatches(){
+  //console.log(this.value);
+  const matchArray = findMatches(this.value, cities);
+  const html = matchArray.map(place => {
+    const regexHighLight = new RegExp(this.value, 'gi');
+    const cityName = place.city.replace(regexHighLight, `<span class="hl">${this.value}</span>`)
+    const stateName = place.state.replace(regexHighLight, `<span class="hl">${this.value}</span>`)
+    return `
+      <li>
+        <span class="name">${cityName},${stateName}</span>
+        <span class="population">${numberWithCommas(place.population)}</span>
+      </li>
+    `;
+  }).sort().join('');
+  suggestions.innerHTML = html;
+}
+
+// 事件
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
+
+
+</script>
+</body>
+</html>
