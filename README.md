@@ -7,7 +7,7 @@
 |3|Playing with CSS Variables and JS|✔️|[Demo](https://gbuzz45.github.io/gbuzz45-JS30-demo/03_updateCSSwithJS/03_updateCSSwithJS.html)|
 |4|Array Cardio Day|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/04_js_array_1/)
 |5|Flex Panels Image Gallery|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/05_FlexboxGallery/index.html)
-|6|Ajax Type Ahead||
+|6|Ajax Type Ahead|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/06_TypeAhead/index.html)
 |7|.Array Cardio Day||
 |8|Fun with HTML5 Canvas||
 |9|14 Must Know Dev Tools Tricks||
