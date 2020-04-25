@@ -49,7 +49,7 @@ console.log({isAdult)};
 
 ## 2. 是否全部都是成年者
 
-every()方法 檢查是否至少全部皆符合條件<br>
+every()方法 檢查是否全部皆符合條件<br>
 
 ```javascript
 const allAdults = people.every(person => ((new Date().getFullYear() - person.year) >= 19));
