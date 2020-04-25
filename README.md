@@ -1,7 +1,7 @@
 # JS30 - gbuzz45 put demo
 
-課程Youtube：<a href="https://www.youtube.com/playlist?list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH"target="_blank">https://www.youtube.com/playlist?list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH</a><br>
-課程Github：<a href="https://github.com/wesbos/JavaScript30"target="_blank">https://github.com/wesbos/JavaScript30</a><br>
+課程Youtube：<a href="https://www.youtube.com/playlist?list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH" target="_blank">https://www.youtube.com/playlist?list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH</a><br>
+課程Github：<a href="https://github.com/wesbos/JavaScript30" target="_blank">https://github.com/wesbos/JavaScript30</a><br>
 
 |#|Course|Done|Demo|
 |---|---|---|---|
