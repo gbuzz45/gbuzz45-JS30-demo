@@ -8,7 +8,7 @@
 |4|Array Cardio Day|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/04_js_array_1/)
 |5|Flex Panels Image Gallery|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/05_FlexboxGallery/index.html)
 |6|Ajax Type Ahead|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/06_TypeAhead/index.html)
-|7|.Array Cardio Day||
+|7|Array Cardio Day|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/07_js_array_2/index.html)
 |8|Fun with HTML5 Canvas||
 |9|14 Must Know Dev Tools Tricks||
 |10|Hold Shift to Check Multiple Checkboxes||
