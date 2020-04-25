@@ -1,5 +1,9 @@
 # JS30 - gbuzz45 put demo
 
+#### Source
+課程Youtube：https://www.youtube.com/playlist?list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH<br>
+課程Github：https://github.com/wesbos/JavaScript30<br>
+
 |#|Course|Done|Demo|
 |---|---|---|---|
 |1|JavaScript Drum Kit|✔️|[Demo](https://gbuzz45.github.io/gbuzz45-JS30-demo/01_Drum_Kit/01_Drum_Kit.html)|
