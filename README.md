@@ -12,7 +12,7 @@
 |5|Flex Panels Image Gallery|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/05_FlexboxGallery/index.html)
 |6|Ajax Type Ahead|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/06_TypeAhead/index.html)
 |7|Array Cardio Day|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/07_js_array_2/index.html)
-|8|Fun with HTML5 Canvas||
+|8|Fun with HTML5 Canvas|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/08_HTML5_Canvas/index.html)
 |9|14 Must Know Dev Tools Tricks||
 |10|Hold Shift to Check Multiple Checkboxes||
 |11|Custom HTML5 Video Playe||
