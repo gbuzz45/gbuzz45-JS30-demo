@@ -5,14 +5,14 @@
 
 |#|Course|Done|Demo|
 |---|---|---|---|
-|1|JavaScript Drum Kit|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/01_Drum_Kit/01_Drum_Kit.html)|
-|2|CSS + JS Clock|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/02_Clock/02_Clock.html)|
-|3|Playing with CSS Variables and JS|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/03_updateCSSwithJS/03_updateCSSwithJS.html)|
-|4|Array Cardio Day|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/04_js_array_1/)
-|5|Flex Panels Image Gallery|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/05_FlexboxGallery/index.html)
-|6|Ajax Type Ahead|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/06_TypeAhead/index.html)
-|7|Array Cardio Day|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/07_js_array_2/index.html)
-|8|Fun with HTML5 Canvas|✔️|[DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/08_HTML5_Canvas/index.html)
+|1|JavaScript Drum Kit|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/01_Drum_Kit)|
+|2|CSS + JS Clock|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/02_Clock)|
+|3|Playing with CSS Variables and JS|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/03_updateCSSwithJS)|
+|4|Array Cardio Day|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/04_js_array_1)
+|5|Flex Panels Image Gallery|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/05_FlexboxGallery)
+|6|Ajax Type Ahead|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/06_TypeAhead)
+|7|Array Cardio Day|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/07_js_array_2)
+|8|Fun with HTML5 Canvas|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/08_HTML5_Canvas)
 |9|14 Must Know Dev Tools Tricks||
 |10|Hold Shift to Check Multiple Checkboxes||
 |11|Custom HTML5 Video Playe||
