@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('hello');
+
+    // Interpolated
+    // %s 帶入變數
+    console.log('Hello I am a %s string!', 'shit');
+
+    // Styled
+    // %c 樣式
+    console.log('%c I am some great text', 'font-size: 50px; background: hotpink; color: #fff;')
+
+    // warning!
+    console.warn('OH NOO');
+
+    // Error :|
+    console.error('Shit!');
+
+    // Info
+    console.info('Crocodiles eat 3-4 people per year');
+
+    // Testing
+    // 增加條件，當false時出現
+    console.assert(1 === 1, 'You did not select the right Element!');
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('ouch'), 'You did not select the right Element!');
+
+    // clearing
+    // 清除
+    // console.clear();
+
+    // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+
+
+    // Grouping together
+    // 群組標籤化(利用在迴圈中)
+    dogs.forEach(dog => {
+      console.log(`This is ${dog.name}`);
+      console.log(`This ${dog.name} is ${dog.age*7} years old`);
+    });
+
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`This ${dog.name} is ${dog.age*7} years old`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    dogs.forEach(dog => {
+      // 使其預設關閉
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`This ${dog.name} is ${dog.age*7} years old`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+
+    // counting
+    // 執行次數
+    console.count('wes');
+    console.count('wes');
+    console.count('wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('wes');
+    console.count('Steve');
+    console.count('wes');
+    console.count('wes');
+
+    // timing
+    // 此例應用在發出請求得到回應的時間
+    console.time('fetching data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+
+    // table
+    // 表格化
+    console.table(dogs);
+
+  </script>
+</body>
+</html>
