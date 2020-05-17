@@ -13,7 +13,7 @@
 |6|Ajax Type Ahead|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/06_TypeAhead)
 |7|Array Cardio Day|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/07_js_array_2)
 |8|Fun with HTML5 Canvas|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/08_HTML5_Canvas)
-|9|14 Must Know Dev Tools Tricks||
+|9|14 Must Know Dev Tools Tricks|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/09_ChromeDevToolsTricks)
 |10|Hold Shift to Check Multiple Checkboxes||
 |11|Custom HTML5 Video Playe||
 |12|Key Sequence Detection (KONAMI CODE)||
