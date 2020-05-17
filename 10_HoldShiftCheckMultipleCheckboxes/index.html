@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hold Shift to Check Multiple Checkboxes</title>
+</head>
+<body>
+  <style>
+
+    html {
+      font-family: sans-serif;
+      background: #ffc600;
+    }
+
+    .inbox {
+      max-width: 400px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #F1F1F1;
+
+      /* Prevent select text */
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none;   /* Safari */
+      -khtml-user-select: none;    /* Konqueror HTML */
+      -moz-user-select: none;      /* Firefox */
+      -ms-user-select: none;       /* Internet Explorer/Edge */
+      user-select: none;   
+    }
+
+    .item:last-child {
+      border-bottom: 0;
+    }
+
+    input:checked + p {
+      background: #F9F9F9;
+      text-decoration: line-through;
+    }
+
+    input[type="checkbox"] {
+      margin: 20px;
+    }
+    p {
+      margin: 0;
+      padding: 20px;
+      transition: background 0.2s;
+      flex: 1;
+      font-family:'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+      border-left: 1px solid #D1E2FF;
+    }
+  </style>
+   <!--
+   The following is a common layout you would see in an email client.
+
+   When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
+
+  -->
+  <div class="inbox">
+    <label class="item">
+      <input type="checkbox">
+      <p>This is an inbox layout.</p>
+    </label>
+    <label class="item">
+      <input type="checkbox">
+      <p>Check one item</p>
+    </label>
+    <label class="item">
+      <input type="checkbox">
+      <p>Hold down your Shift key</p>
+    </label>
+    <label class="item">
+      <input type="checkbox">
+      <p>Check a lower item</p>
+    </label>
+    <label class="item">
+      <input type="checkbox">
+      <p>Everything in between should also be set to checked</p>
+    </label>
+    <label class="item">
+      <input type="checkbox">
+      <p>Try to do it without any libraries</p>
+    </label>
+    <label class="item">
+      <input type="checkbox">
+      <p>Just regular JavaScript</p>
+    </label>
+    <label class="item">
+      <input type="checkbox">
+      <p>Good Luck!</p>
+    </label>
+    <label class="item">
+      <input type="checkbox">
+      <p>Don't forget to tweet your result!</p>
+    </label>
+  </div>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  let lastChecked;
+
+  function handleCheck(e){
+    let inBetween = false; // 狀態辨別
+    if(e.shiftKey && this.checked){ //該處的this為click事件的對象
+      checkboxes.forEach(checkbox => {
+        if(checkbox === this || checkbox === lastChecked ){
+          inBetween = !inBetween;
+        }
+        if(inBetween){
+          checkbox.checked = true;
+        }
+      });
+    }
+    lastChecked = this;
+  }
+
+
+  // 因為是selectorAll所以ForEach執行
+  checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+
+</script>
+</body>
+</html>
