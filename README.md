@@ -15,7 +15,7 @@
 |8|Fun with HTML5 Canvas|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/08_HTML5_Canvas)
 |9|14 Must Know Dev Tools Tricks|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/09_ChromeDevToolsTricks)
 |10|Hold Shift to Check Multiple Checkboxes|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/10_HoldShiftCheckMultipleCheckboxes)
-|11|Custom HTML5 Video Playe||
+|11|Custom HTML5 Video Playe|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/11_CustomVideoPlayer)
 |12|Key Sequence Detection (KONAMI CODE)||
 |13|Slide In on Scroll||
 |14|Object and Arrays - Reference VS Copy||
