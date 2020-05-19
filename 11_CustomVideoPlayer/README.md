@@ -28,7 +28,7 @@ input[type=range]::-moz-range-thumb
 ```
 
 ### 程式碼
-```javascript=
+```javascript
 // ====== Elements ====== 
 const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
@@ -111,7 +111,7 @@ progress.addEventListener('mouseup', () => mousedown = false);
 
 ### 增加全螢幕
 照抄[MDN DOC全螢幕模式](https://developer.mozilla.org/zh-TW/docs/Web/API/Fullscreen_API)
-```javascript=
+```javascript
 // FullScreen
 document.addEventListener('keydown', function(e) {
   if(e.keyCode == 122){
