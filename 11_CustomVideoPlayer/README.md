@@ -54,7 +54,7 @@ function togglePlay(){
 }
 
 function toggleButton() {
-  // 這邊用this是因為偵測是播放/暫停的對象是video不是toggle按鈕
+  // 這邊用this是因為偵測是播放/暫停的對象是video不是toggle按鈕嗎? 可以直接用video嗎?
   const icon = this.paused ? '►' : '❚ ❚';
   toggle.textContent = icon;
 }
