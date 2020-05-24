@@ -35,6 +35,3 @@ window.addEventListener('keyup', (e) => {
 });
 
 ```
-
-cornify.js 94仿拍貼機器的套件啊<br>
-R.I.P 橋本和久<br>
