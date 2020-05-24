@@ -24,7 +24,7 @@ window.addEventListener('keyup', (e) => {
   // e.keyCode : [a] = 65
   pressed.push(e.keyCode);
   pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
-  // 假如輸入的新值非secretCode中連續內容，則由前頭刪除輸入的數量。目的是保持符合secretCode的長度。
+  // 由前頭刪除輸入的數量。目的是保持符合secretCode的長度。
 
   // 假如比較值是個陣列，則先用join()讓陣列合併連接詞回傳一組字串再做比較
   if(pressed.join('').includes(secretCode.join(''))){
