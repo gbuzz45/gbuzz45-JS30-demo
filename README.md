@@ -18,7 +18,7 @@
 |11|Custom HTML5 Video Playe|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/11_CustomVideoPlayer)
 |12|Key Sequence Detection (KONAMI CODE)|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/12_KeySequenceDetection)
 |13|Slide In on Scroll|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/13_SlideInOnScroll)
-|14|Object and Arrays - Reference VS Copy|✔️|[LINK](https://gbuzz45.github.io/gbuzz45-JS30-demo/14_JavaScriptReferencesVSCopying）
+|14|Object and Arrays - Reference VS Copy|✔️|[LINK](https://gbuzz45.github.io/gbuzz45-JS30-demo/14_JavaScriptReferencesVSCopying)
 |15|LocalStorage and Event Delegation||
 |16|CSS Text Shadow Mouse Move Effect||
 |17|Sorting Band Names without articles||
