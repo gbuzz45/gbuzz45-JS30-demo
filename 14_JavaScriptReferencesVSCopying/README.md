@@ -92,6 +92,7 @@ day2.unit.hours = 72;
 ```
 
 #### 法3：需要 Deep Clone 小技巧使用`JSON.stringify()`與`JSON.parse()`
+其他格式如Array也可以使用
 ```javascript
 const day3 = JSON.parse(JSON.stringify(day));
 
