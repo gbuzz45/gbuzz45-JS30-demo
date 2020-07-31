@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Reference VS Copy</title>
+  <style>body{background: #000;}</style>
+</head>
+<body>
+
+  <script>
+    console.log('%c ---------基本型別複製----------', 'background:crimson; color: #fff;');
+    // 基本型別: strings, numbers, booleans
+    let age = 100;
+    let age2 = age;
+    console.log(`[number]原age／複製的age2：`);
+    console.log(age, age2);
+    age = 200;
+    console.log(`[number]修改後的原age／複製的age2：`);
+    console.log(age, age2); 
+    // 可得age2的確是複製，age改也不會動到age2
+
+    let name= 'Wes';
+    let name2 = name;
+    console.log(`[string]原name／複製的name2：`);
+    console.log(name, name2);
+    name = 'Mika';
+    console.log(`[string]修改後的原name／複製的name2：`);
+    console.log(name, name2); 
+
+
+    console.log('%c ---------指向陣列----------', 'background:crimson; color: #fff;');
+
+    // 這是個字串
+    const players = ['1st', '2nd', '3rd', '4th'];
+
+    // array reference 指向同個陣列，改值會影響原陣列，並沒有真的複製一個陣列
+    const team = players;
+    console.log(`[Array]原players／指向的team：`);
+    console.log(players, team);
+    team[0] = 'CHANGEVALUE';
+    console.log(`[Array]修改後原players／指向的team：`);
+    console.log(players, team);
+    team[0] = '1st';
+
+    console.log('%c ----------複製陣列---------', 'background:crimson; color: #fff;');
+
+    // 以下練習真的複製陣列
+
+    // 法1. slice
+    const team2 = players.slice();
+    team[1] = 'CHANGEVALUE';
+    console.log(`[Array]修改後原players／複製的team2：`);
+    console.log(players, team2);
+    team[1] = '2nd'; // refresh
+
+    // 法2. concat
+    const team3 = [].concat(players);
+    team[2] = 'CHANGEVALUE';
+    console.log(`[Array]修改後原players／複製的team3：`);
+    console.log(players, team3);
+    team[2] = '3rd'; // refresh
+
+    // 法3. ES6 spread
+    const team4 = [...players];
+    team[3] = 'CHANGEVALUE';
+    console.log(`[Array]修改後原players／複製的team4：`);
+    console.log(players, team4);
+    team[3] = '4th'; // refresh
+
+    // 法4. Array.from() 
+    const team5 = Array.from(players);
+    team[3] = 'CHANGEVALUE';
+    console.log(`[Array]修改後原players／複製的team5：`);
+    console.log(players, team5);
+    team[3] = '4th'; // refresh
+
+    console.log('%c ----------指向物件---------', 'background:crimson; color: #fff;');
+
+    // 物件也是一樣的
+    // 這是個物件
+    const person = {
+      name: 'Wes Bos',
+      age: 80
+    };
+
+    const captain = person;
+    captain.number = 100;
+    console.log(`指向的captian影響了原person`);
+    console.log(person);
+    delete person['number']; //refreah
+
+
+    console.log('%c ----------複製物件---------', 'background:crimson; color: #fff;');
+
+    // 法1. Object.assign
+    const captain2 = Object.assign({}, person, {number:90});
+    console.log(`複製的captian2沒有影響原person`);
+    console.log(person);
+    console.log(captain2);
+
+
+    //法2. ES6 spread
+    const captain3 = {...person};
+    captain3.number = 80;
+    console.log(`複製的captian2沒有影響原person`);
+    console.log(person);
+    console.log(captain3);
+
+
+    console.log('%c ----------複製物件，不只一層，用前述方式只複製一層---------', 'background:crimson; color: #fff;');
+
+    // 示範2層
+    const day = {
+      date: '2020/03/21',
+      weather: 'cloudy',
+      order: 1,
+      unit:{
+        hours: 24,
+        mins: 24*60,
+        seconds: 24*60*60,
+      }
+    }
+    console.log(day);
+
+    const day2 = Object.assign({}, day);
+    day2.order = 1000;
+    day2.unit.hours = 72;
+
+    console.log(`這邊物件複製的方式都是只有複製第一層，第二層還是指向`);
+    console.log(day);
+    console.log(day2);
+
+    console.log(day.unit);
+    console.log(day2.unit);
+
+    console.log('%c ----------Deep Clone 複製物件，不只一層---------', 'background:crimson; color: #fff;');
+    day.unit.hours = 24; // refresh
+
+
+    // Deep Clone
+    const day3 = JSON.parse(JSON.stringify(day));
+    day3.weather = 'sunny';
+    day3.unit.hours = 1000000;
+    console.log(day);
+    console.log(day3);
+
+    console.log(day.unit);
+    console.log(day3.unit);
+
+    // JSON.stringify() 轉成文字化的JSON
+    // JSON.parse(text [,reviver]) 轉成Object格式
+
+  </script>
+
+</body>
+</html>
