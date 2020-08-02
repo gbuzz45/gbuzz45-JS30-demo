@@ -19,7 +19,7 @@
 |12|Key Sequence Detection (KONAMI CODE)|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/12_KeySequenceDetection)
 |13|Slide In on Scroll|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/13_SlideInOnScroll)
 |14|Object and Arrays - Reference VS Copy|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/14_JavaScriptReferencesVSCopying)
-|15|LocalStorage and Event Delegation||
+|15|LocalStorage and Event Delegation|✔️|[LINK](https://github.com/gbuzz45/gbuzz45-JS30-demo/tree/master/15_LocalStorage)
 |16|CSS Text Shadow Mouse Move Effect||
 |17|Sorting Band Names without articles||
 |18|Tally String Times with Reduce||
