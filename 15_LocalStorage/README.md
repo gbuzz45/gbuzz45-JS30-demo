@@ -4,10 +4,9 @@
 [DEMO](https://gbuzz45.github.io/gbuzz45-JS30-demo/15_LocalStorage/)
 
 ## 目標
-學習使用LocalStorage與事件委派
-新增清單並儲存資料與狀態在本機
-重整瀏覧器列出記錄直到記錄被刪除
-
+學習使用LocalStorage與事件委派<br>
+新增清單並儲存資料與狀態在本機<br>
+重整瀏覧器列出記錄直到記錄被刪除<br>
 <br>
 
 ## 步驟1. 輸入文字 送出表單 展示輸入內容
@@ -50,7 +49,7 @@ function populateItem(things = [], thingsList){
 <br>
 
 ## 步驟2. LocalStorage
-1.在`addItem`函式中增加`localStorage`
+1.在`addItem`函式中增加`localStorage`<br>
 且為讓資料易取易讀所以使用`JSON.stringify`將陣列轉成JSON字串
 ```javascript
 localStorage.setItem('items', JSON.stringify(items));
@@ -60,14 +59,14 @@ localStorage.setItem('items', JSON.stringify(items));
 | ![](https://i.imgur.com/AoU2sQo.png) | ![](https://i.imgur.com/jSiTLRB.png)|
 <br>
 
-2.一開始定義的儲存變數要改為先看看有沒有記錄，無記錄就空陣列
+2.一開始定義的儲存變數要改為先看看有沒有記錄，無記錄就空陣列<br>
 但資料要用`JSON.parse`返回成陣列的物件型態
 ```javascript
 const items = JSON.parse(localStorage.getItem('items')) || []; 
 ```
 <br>
 
-3.頁面載入時就執行一次展示函式`populateItem`
+3.頁面載入時就執行一次展示函式`populateItem`<br>
 看有無記錄需要展示
 ```javascript
 populateItem(items, itemsList);
@@ -80,23 +79,23 @@ populateItem(items, itemsList);
 <br>
 
 ## 步驟3. 處理選取的狀態
-此為學習事件委派
-通常直覺是使用這種作法改變選取狀態：
+此為學習事件委派<br>
+通常直覺是使用這種作法改變選取狀態：<br>
 ```javascript
 const checkBoxes = document.querySelectorAll('input');
 checkBoxes.forEach(checkBox => checkBox.addEventListener('click', () =>
     change checked...
 );
 ```
-但會發現展示與點擊的順序一旦異動
-會發生選取不到的情況
+但會發現展示與點擊的順序一旦異動<br>
+會發生選取不到的情況<br><br>
 
-所以針對透過JS動態產生的DOM所下的互動
-可用事件委派的方式進行
+所以針對透過JS動態產生的DOM所下的互動<br>
+可用事件委派的方式進行<br><br>
 
-此例的概念就是點擊要綁在「載入時就已存在的」`ItemsList`清單上
-不管他子孫層的東西是不是「未來才會存在」
-只要點擊的對象符合條件就執行動作
+此例的概念就是點擊要綁在「載入時就已存在的」`ItemsList`清單上<br>
+不管他子孫層的東西是不是「未來才會存在」<br>
+只要點擊的對象符合條件就執行動作<br>
 ```javascript
 itemsList.addEventListener('click', toggleDone);
 ```
