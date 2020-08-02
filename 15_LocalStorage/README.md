@@ -88,10 +88,10 @@ checkBoxes.forEach(checkBox => checkBox.addEventListener('click', () =>
 );
 ```
 但會發現展示與點擊的順序一旦異動<br>
-會發生選取不到的情況<br><br>
+會發生選取不到的情況<br>
 
 所以針對透過JS動態產生的DOM所下的互動<br>
-可用事件委派的方式進行<br><br>
+可用事件委派的方式進行<br>
 
 此例的概念就是點擊要綁在「載入時就已存在的」`ItemsList`清單上<br>
 不管他子孫層的東西是不是「未來才會存在」<br>
